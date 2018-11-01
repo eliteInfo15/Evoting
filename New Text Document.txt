@@ -1,0 +1,12 @@
+
+
+
+
+
+select count(*) mycount,candidate_id,election_id from vote_data as T group BY candidate_id,election_id
+
+
+INSERT INTO voting_result (select count(*),candidate_id,election_id from vote_data group BY candidate_id,election_id);
+
+
+SELECT candidate_id,election_id FROM `voting_result` WHERE vote_count in (select max(vote_count) from voting_result GROUP BY election_id)
