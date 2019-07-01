@@ -1,6 +1,5 @@
-<?php 
-
-echo "world"
+<?php echo 'world;'
+echo "world";
  $cnd_id=$_POST["cnd_id"];
               $cnd_name=$_POST["cnd_name"];
                $cnd_mail=$_POST["cnd_mail"];
